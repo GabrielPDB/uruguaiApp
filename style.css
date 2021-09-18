@@ -22,7 +22,8 @@ body {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
   background: var(--blue-color);
 }
 
@@ -34,9 +35,10 @@ header {
   margin-top: 2rem;
 }
 
-.logo {
+.logo a {
   display: flex;
-  justify-content: space-around;
+  gap: 2rem;
+  justify-content: center;
   width: 120%;
   align-items: center;
 }
@@ -63,7 +65,7 @@ nav .menuItem {
   gap: 1rem;
   background: white;
   padding: 1rem;
-  width: 100%;
+  width: 50%;
   border-radius: 1rem;
   font-size: 1.5rem;
   transition: 200ms;
@@ -89,4 +91,36 @@ nav .menuItem .material-icons {
 nav .menuItem a {
   color: var(--gray-color);
   transition: 200ms;
+}
+
+/* SHOPS */
+
+main.shops {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--yellow-color);
+  border-radius: 1rem;
+  color: var(--gray-color);
+  transition: 200ms;
+  box-shadow: 0.5rem 0.5rem 1.8rem -0.3rem rgb(61, 60, 60);
+}
+
+.shop:active {
+  box-shadow: none;
+}
+
+.shop img {
+  width: 2rem;
 }
